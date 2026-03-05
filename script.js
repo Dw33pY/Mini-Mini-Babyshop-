@@ -443,7 +443,7 @@ function initScrollReveal() {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px 60px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
@@ -572,13 +572,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initActiveNav();
     initFeatured();
+
+    // Run reveal immediately so elements already in viewport don't stay hidden.
+    // The loader sits on top visually, but the observer still fires correctly.
     initScrollReveal();
 
-    // Carousel and animations after loader
+    // Carousel and animations after loader finishes (2.2s)
     setTimeout(() => {
         initCarousel();
         initAnimations();
-        initScrollReveal(); // re-run after carousel injects elements
+        // Re-run after carousel injects its card elements into the DOM
+        initScrollReveal();
     }, 2300);
 
     // Cart button bindings
