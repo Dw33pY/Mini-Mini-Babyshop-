@@ -2,16 +2,73 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - MiniMini Babyshop Kenya</title>
-    <meta name="description" content="Premium baby product details at MiniMini Babyshop Kenya.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>MiniMini Babyshop Kenya | Premium Baby Essentials</title>
+    <meta name="description" content="Premium organic baby clothes, wooden toys & essentials delivered across Kenya. M-PESA accepted. Fast delivery in Nairobi & major towns.">
+    <meta name="keywords" content="baby shop Kenya, baby clothes Nairobi, organic baby products, M-PESA baby shop, baby essentials Kenya">
+    <meta property="og:title" content="MiniMini Babyshop Kenya">
+    <meta property="og:description" content="Premium baby essentials delivered across Kenya. M-PESA accepted.">
+    <meta property="og:type" content="website">
+    <!-- Preconnect to external origins ASAP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts: display=swap so text shows immediately with system fallback -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome: non-blocking load -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Site stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind utility replacements (removes 100kb+ CDN script) -->
+    <style>
+        .scroll-smooth{scroll-behavior:smooth}
+        .fixed{position:fixed}.relative{position:relative}.absolute{position:absolute}.sticky{position:sticky}
+        .inset-y-0{top:0;bottom:0}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}
+        .top-5{top:1.25rem}.right-5{right:1.25rem}.top-20{top:5rem}
+        .z-10{z-index:10}.z-30{z-index:30}.z-50{z-index:50}.z-\[60\]{z-index:60}
+        .flex{display:flex}.grid{display:grid}.hidden{display:none}.block{display:block}.inline-flex{display:inline-flex}
+        .flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-start{align-items:flex-start}.items-stretch{align-items:stretch}
+        .justify-center{justify-content:center}.justify-between{justify-content:space-between}
+        .flex-1{flex:1 1 0%}
+        .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+        .gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-12{gap:3rem}.gap-14{gap:3.5rem}.gap-16{gap:4rem}
+        .w-full{width:100%}.w-72{width:18rem}.h-20{height:5rem}.min-h-screen{min-height:100vh}
+        .max-w-7xl{max-width:80rem}.max-w-5xl{max-width:64rem}.max-w-3xl{max-width:48rem}
+        .mx-auto{margin-left:auto;margin-right:auto}
+        .mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.mt-14{margin-top:3.5rem}.mt-16{margin-top:4rem}.mt-24{margin-top:6rem}
+        .mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}
+        .mr-2{margin-right:.5rem}
+        .py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-24{padding-top:6rem;padding-bottom:6rem}
+        .px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}
+        .pt-24{padding-top:6rem}.pb-10{padding-bottom:2.5rem}
+        .p-6{padding:1.5rem}
+        .text-center{text-align:center}.text-sm{font-size:.875rem;line-height:1.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}
+        .font-medium{font-weight:500}
+        .opacity-30{opacity:.3}
+        .shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+        .overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}
+        .translate-x-full{transform:translateX(100%)}
+        .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+        @media(min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+        @media(min-width:1024px){.lg\:flex-row{flex-direction:row}.lg\:w-1\/2{width:50%}}
+        @media(min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}
+        @media(min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}
+    </style>
 </head>
 <body>
+
+    <!-- ══ LOADER ══ -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">MiniMini</div>
+            <div class="loader-sub">Babyshop Kenya</div>
+            <div class="loader-bar-track"><div class="loader-bar"></div></div>
+        </div>
+    </div>
 
     <!-- ══ NAVIGATION ══ -->
     <nav class="fixed w-full z-50" id="navbar">
@@ -21,12 +78,14 @@
                     <i class="fa-solid fa-baby-carriage text-2xl" style="color:var(--blush)"></i>
                     Mini<span>Mini</span>
                 </a>
+
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html"  class="nav-link">Shop</a>
-                    <a href="index.html#about"   class="nav-link">About</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
+
                 <div class="flex items-center gap-3">
                     <button id="cart-btn" class="cart-icon-btn" aria-label="Open cart">
                         <i class="fa-solid fa-bag-shopping"></i>
@@ -45,98 +104,191 @@
         <button id="close-mobile-menu" class="absolute top-5 right-5 cart-icon-btn" aria-label="Close menu">
             <i class="fa-solid fa-times"></i>
         </button>
-        <a href="index.html"        class="mobile-nav-link nav-link mobile">Home</a>
-        <a href="shop.html"         class="mobile-nav-link nav-link mobile">Shop</a>
-        <a href="index.html#about"  class="mobile-nav-link nav-link mobile">About</a>
-        <a href="index.html#contact"class="mobile-nav-link nav-link mobile">Contact</a>
+        <a href="#home"      class="mobile-nav-link nav-link mobile">Home</a>
+        <a href="shop.html"  class="mobile-nav-link nav-link mobile">Shop</a>
+        <a href="#about"     class="mobile-nav-link nav-link mobile">About</a>
+        <a href="#contact"   class="mobile-nav-link nav-link mobile">Contact</a>
+        <a href="shop.html" class="btn-primary mt-8 justify-center">
+            <i class="fa-solid fa-bag-shopping"></i> Shop Now
+        </a>
     </div>
 
-    <!-- ══ PRODUCT CONTENT ══ -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style="padding-top:8rem">
-
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb mb-10" aria-label="Breadcrumb">
-            <a href="index.html">Home</a>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="shop.html">Shop</a>
-            <i class="fa-solid fa-chevron-right"></i>
-            <span id="breadcrumb-name" style="color:var(--text-muted)">Product</span>
-        </nav>
-
-        <div class="flex flex-col lg:flex-row gap-14">
-
-            <!-- ── Gallery ── -->
-            <div class="lg:w-1/2 product-gallery">
-                <img id="product-main-image" src="" alt="Product" class="product-main-img">
-                <div id="thumbnails" class="no-scrollbar"></div>
+    <!-- ══ HERO ══ -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center px-4 relative">
+        <div class="max-w-3xl z-10 hero-content" style="padding-top:5rem">
+            <div class="hero-tag reveal">
+                <i class="fa-solid fa-leaf"></i> Organic &amp; Baby-Safe
             </div>
-
-            <!-- ── Info ── -->
-            <div class="lg:w-1/2 product-info">
-                <h1 id="product-heading" class="product-title"></h1>
-
-                <div class="product-rating">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <span class="rating-count">(128 Kenyan Reviews)</span>
-                </div>
-
-                <p id="product-price" class="product-price"></p>
-                <p id="product-description" class="product-desc"></p>
-
-                <!-- Size Selector -->
-                <span class="size-label">Select Size</span>
-                <div class="size-selector mb-8">
-                    <div><input type="radio" name="size" id="size-0-3" checked><label for="size-0-3">0–3 Months</label></div>
-                    <div><input type="radio" name="size" id="size-3-6"><label for="size-3-6">3–6 Months</label></div>
-                    <div><input type="radio" name="size" id="size-6-9"><label for="size-6-9">6–9 Months</label></div>
-                    <div><input type="radio" name="size" id="size-9-12"><label for="size-9-12">9–12 Months</label></div>
-                </div>
-
-                <!-- Qty & Add to Cart -->
-                <div class="flex gap-3 mb-8 items-stretch">
-                    <div class="qty-control">
-                        <button id="qty-minus" aria-label="Decrease quantity">−</button>
-                        <input type="text" id="qty-input" value="1" readonly aria-label="Quantity">
-                        <button id="qty-plus" aria-label="Increase quantity">+</button>
-                    </div>
-                    <button id="add-to-cart-btn" class="add-to-cart-main">
-                        <i class="fa-solid fa-bag-shopping"></i> Add to Cart
-                    </button>
-                </div>
-
-                <!-- Shipping info -->
-                <div class="shipping-grid">
-                    <div class="shipping-item"><i class="fa-solid fa-truck-fast"></i> Free Delivery Nairobi*</div>
-                    <div class="shipping-item"><i class="fa-solid fa-mobile-screen"></i> M-PESA Accepted</div>
-                    <div class="shipping-item"><i class="fa-solid fa-rotate-left"></i> 7-Day Returns</div>
-                    <div class="shipping-item"><i class="fa-solid fa-shield-heart"></i> Baby-Safe Certified</div>
-                </div>
+            <h1 class="hero-title reveal reveal-delay-1">
+                Everything for<br><em>your little one.</em>
+            </h1>
+            <p class="hero-sub reveal reveal-delay-2">
+                Premium organic clothes &amp; wooden toys delivered across Kenya.<br>M-PESA accepted. Free delivery in Nairobi.*
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center reveal reveal-delay-3">
+                <a href="shop.html" class="btn-primary">
+                    Shop Collection <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn-secondary">Our Story</a>
             </div>
         </div>
 
-        <!-- ── Related Products ── -->
-        <div class="mt-24">
-            <div class="text-center mb-12">
-                <span class="section-label">You May Also Like</span>
-                <h2 class="section-title">Related Products</h2>
-            </div>
-            <div id="related-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <!-- Wave divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="display:block;width:100%;height:60px">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fdf6ee"/>
+            </svg>
         </div>
-    </main>
+    </section>
+
+    <!-- ══ TRUST STRIP ══ -->
+    <div class="trust-strip">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+                <div class="trust-item"><i class="fa-solid fa-leaf"></i> 100% Organic Materials</div>
+                <div class="trust-item"><i class="fa-solid fa-truck-fast"></i> Fast Nairobi Delivery</div>
+                <div class="trust-item"><i class="fa-solid fa-mobile-screen"></i> M-PESA Accepted</div>
+                <div class="trust-item"><i class="fa-solid fa-rotate-left"></i> 7-Day Returns</div>
+                <div class="trust-item"><i class="fa-solid fa-shield-heart"></i> Baby-Safe Certified</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ NEW ARRIVALS CAROUSEL ══ -->
+    <section class="carousel-section" aria-label="New Arrivals">
+        <div class="text-center mb-12 reveal">
+            <span class="section-label">Fresh In</span>
+            <h2 class="section-title">New Arrivals</h2>
+            <p class="section-sub">Hand-picked for premium quality</p>
+        </div>
+        <div class="carousel-container relative max-w-7xl mx-auto">
+            <div class="carousel-viewport">
+                <div class="carousel-track"><!-- Filled by JS --></div>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="carousel-dots" role="tablist" aria-label="Carousel navigation"></div>
+    </section>
+
+    <!-- ══ BESTSELLERS ══ -->
+    <section id="shop" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-14 reveal">
+            <span class="section-label">Top Picks</span>
+            <h2 class="section-title">Our Bestsellers</h2>
+            <p class="section-sub">Loved by Kenyan parents</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-grid"></div>
+        <div class="text-center mt-14 reveal">
+            <a href="shop.html" class="btn-dark">
+                View All Products <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ══ ABOUT ══ -->
+    <section id="about" class="about-section py-24">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+            <!-- Image -->
+            <div class="lg:w-1/2 about-img-wrap reveal" style="padding-right:2rem">
+                <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800" alt="Mom and baby" loading="lazy">
+                <div class="about-img-badge">
+                    <div class="num">5★</div>
+                    <div class="lbl">Rated by parents</div>
+                </div>
+            </div>
+            <!-- Text -->
+            <div class="lg:w-1/2 reveal reveal-delay-2">
+                <span class="section-label">Our Story</span>
+                <h2 class="section-title mb-6">Kenyan parents,<br>we've got you.</h2>
+                <p class="section-sub mb-10">At MiniMini, we know Kenyan babies deserve the best. We've curated premium products that withstand our vibrant lifestyles while keeping your little one safe and comfortable.</p>
+
+                <div class="flex flex-col">
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="about-feature-text">
+                            <h4>100% Organic & Baby-Safe</h4>
+                            <p>Every product tested for sensitive skin. No harmful chemicals, ever.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="about-feature-text">
+                            <h4>Fast Delivery Across Kenya</h4>
+                            <p>Same-day delivery in Nairobi. 1–3 days to major towns.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <div class="about-feature-text">
+                            <h4>M-PESA Payments</h4>
+                            <p>Pay the Kenyan way — quick, safe, and always accepted.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                        <div class="about-feature-text">
+                            <h4>7-Day Easy Returns</h4>
+                            <p>Not happy? We make returns simple, no questions asked.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ══ FOOTER ══ -->
-    <footer class="py-12 mt-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="footer-bottom">&copy; 2026 MiniMini Babyshop Kenya. Made by Dw33pY</p>
+    <footer id="contact" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-10">
+                <div>
+                    <a href="index.html" class="footer-logo">
+                        <i class="fa-solid fa-baby-carriage" style="color:var(--blush)"></i>
+                        Mini<span>Mini</span>
+                    </a>
+                    <p class="footer-desc">Premium baby essentials, delivered anywhere in Kenya with love.</p>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#" class="cart-icon-btn" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="cart-icon-btn" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/254712345678" class="cart-icon-btn" style="background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.3);color:#25d366" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <a href="index.html"    class="footer-link">Home</a>
+                    <a href="shop.html"     class="footer-link">Shop All Products</a>
+                    <a href="#about"        class="footer-link">About Us</a>
+                    <a href="#contact"      class="footer-link">Contact</a>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Get In Touch</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> +254 712 345 678</div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="224a474e4e4d624f4b4c4b4f4b4c4b0c414d0c4947">[email&#160;protected]</a></div>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Nairobi, Kenya</div>
+                    <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp Orders Welcome</div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            <p class="footer-bottom">&copy; 2026 MiniMini Babyshop Kenya. All rights reserved. | Made by Dw33pY</p>
         </div>
     </footer>
 
     <!-- ══ FLOATING BUTTONS ══ -->
-    <a href="https://wa.me/254712345678" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/254712345678?text=Hi!%20I%20have%20a%20question%20about%20MiniMini%20Babyshop." 
+       target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <button id="backToTop" aria-label="Back to top">
@@ -154,6 +306,7 @@
             <div id="empty-cart-msg" class="text-center py-16" style="color:var(--text-muted)">
                 <i class="fa-solid fa-bag-shopping text-4xl mb-4 opacity-30"></i>
                 <p class="font-medium">Your cart is empty</p>
+                <a href="shop.html" class="btn-dark mt-4 inline-flex text-sm">Browse Products</a>
             </div>
         </div>
         <div class="cart-footer">
@@ -166,96 +319,6 @@
             </button>
         </div>
     </div>
-
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const productId = parseInt(urlParams.get('id')) || 1;
-            const product = products.find(p => p.id === productId) || products[0];
-
-            // Set meta title dynamically
-            document.title = `${product.name} – MiniMini Babyshop Kenya`;
-
-            // Populate fields
-            document.getElementById('product-heading').textContent    = product.name;
-            document.getElementById('breadcrumb-name').textContent    = product.name;
-            document.getElementById('product-description').textContent = product.description;
-            document.getElementById('product-price').textContent      = formatKES(product.price);
-
-            // Main image with smooth swap
-            const mainImg = document.getElementById('product-main-image');
-            mainImg.src = product.images[0];
-            mainImg.alt = product.name;
-
-            // Thumbnails
-            const thumbs = document.getElementById('thumbnails');
-            thumbs.innerHTML = '';
-            product.images.forEach((img, idx) => {
-                const btn = document.createElement('button');
-                btn.className = `thumb-btn ${idx === 0 ? 'active' : ''}`;
-                btn.setAttribute('aria-label', `View image ${idx + 1}`);
-                btn.innerHTML = `<img src="${img}" alt="${product.name} view ${idx + 1}">`;
-                btn.addEventListener('click', () => {
-                    mainImg.classList.add('loading');
-                    const i = new Image();
-                    i.onload = () => { mainImg.src = img; mainImg.classList.remove('loading'); };
-                    i.src = img;
-                    thumbs.querySelectorAll('.thumb-btn').forEach(t => t.classList.remove('active'));
-                    btn.classList.add('active');
-                });
-                thumbs.appendChild(btn);
-            });
-
-            // Qty controls
-            const qtyInput = document.getElementById('qty-input');
-            document.getElementById('qty-minus').addEventListener('click', () => {
-                const v = parseInt(qtyInput.value);
-                if (v > 1) qtyInput.value = v - 1;
-            });
-            document.getElementById('qty-plus').addEventListener('click', () => {
-                qtyInput.value = parseInt(qtyInput.value) + 1;
-            });
-
-            // Add to cart
-            document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-                const sizeId = document.querySelector('input[name="size"]:checked')?.id || 'size-0-3';
-                const size = sizeId.replace('size-', '').replace(/-/g, '–') + ' Months';
-                const qty = parseInt(qtyInput.value);
-                addToCart(product.id, size, qty);
-            });
-
-            // Related products (exclude current)
-            const related = products.filter(p => p.id !== product.id).slice(0, 3);
-            const relatedGrid = document.getElementById('related-grid');
-            related.forEach((p, i) => {
-                const card = document.createElement('div');
-                card.className = 'product-card reveal';
-                card.style.transitionDelay = `${i * 0.1}s`;
-                card.innerHTML = `
-                    <div class="product-card__img-wrap">
-                        <img src="${p.image}" alt="${p.name}" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <div class="product-card__name">${p.name}</div>
-                        <div class="product-card__price">${formatKES(p.price)}</div>
-                        <div class="product-card__actions">
-                            <a href="product.html?id=${p.id}" class="view-btn">View Details</a>
-                            <button class="cart-btn-sm" onclick="addToCart(${p.id})" aria-label="Add to cart">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                        </div>
-                    </div>
-                `;
-                relatedGrid.appendChild(card);
-            });
-
-            // Scroll reveal
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
